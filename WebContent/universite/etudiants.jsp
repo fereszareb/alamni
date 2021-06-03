@@ -10,14 +10,14 @@
 <meta name="author"
 	content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
 <meta name="generator" content="Hugo 0.80.0">
-<title>Enseignants</title>
+<title>étudiants</title>
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
 	rel="stylesheet"
 	integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
 	crossorigin="anonymous">
 <link rel="stylesheet" href="../fontawesome/all.css">
-<script src="../js/check_admin.js"></script>
+<script src="../js/check_univ.js"></script>
 <style>
 .bd-placeholder-img {
 	font-size: 1.125rem;
@@ -166,45 +166,73 @@ body {
 
 	<div class="container-fluid">
 		<div class="row">
-			<nav id="sidebarMenu"
-				class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
-				<div class="position-sticky pt-3">
-					<ul class="nav flex-column">
-						<li class="nav-item"><a class="nav-link" aria-current="page"
-							href="index.jsp"> <i class="fas fa-tachometer-alt feather"></i>
-								Dashboard
-						</a></li>
-						<li class="nav-item"><a class="nav-link"
-							href="universite.jsp"> <i class="fas fa-university feather"></i>
-								Universités
-						</a></li>
-						<li class="nav-item"><a class="nav-link active"
-							href="enseignant.jsp"> <i class="fas fa-user feather"></i>
-								Enseignants
-						</a></li>
-						<li class="nav-item"><a class="nav-link "
-							href="etudiants.jsp"> <i class="fas fa-user-graduate feather"></i>
-								Etudiants
-						</a></li>
-						<li class="nav-item"><a class="nav-link" href="admin.jsp">
-								<i class="fas fa-user-shield feather"></i> Admins
-						</a></li>
-						<li class="nav-item"><a class="nav-link" href="parametre.jsp">
-								<i class="fas fa-cog feather"></i> Paramétres
-						</a></li>
-						<li class="nav-item"><a class="nav-link" id="deconn"> <i
-								class="fas fa-sign-out-alt feather"></i> Déconnexion
-						</a></li>
-					</ul>
-				</div>
-			</nav>
+    <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+      <div class="position-sticky pt-3">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="index.jsp">
+              <i class="fas fa-tachometer-alt feather"></i>
+              Dashboard
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="enseignant.jsp">
+              <i class="fas fa-user feather"></i>
+              Enseignant
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="etudiants.jsp">
+              <i class="fas fa-user-graduate feather"></i>
+              Etudiants
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="note.jsp">
+              <i class="fas fa-clipboard-check feather"></i>
+              Note
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="calendrier.jsp">
+              <i class="fas fa-calendar-alt feather"></i>
+              Calendrier
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="filiere.jsp">
+              <i class="fas fa-layer-group feather"></i>
+              Filiére
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="classe.jsp">
+              <i class="fas fa-graduation-cap feather"></i>
+              Classes
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="matiere.jsp">
+              <i class="fas fa-book feather"></i>
+              Matiéres
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" id="deconn">
+              <i class="fas fa-sign-out-alt feather"></i>
+              déconnexion
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
 
 			<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 pt-3">
 
 				<nav aria-label="breadcrumb">
 					<ol class="breadcrumb">
 						<li class="breadcrumb-item"><a href="index.jsp">Admin</a></li>
-						<li class="breadcrumb-item active" aria-current="page">Enseignants</li>
+						<li class="breadcrumb-item active" aria-current="page">étudiants</li>
 					</ol>
 				</nav>
 
@@ -291,7 +319,6 @@ body {
 									aria-label="Close"></button>
 							</div>
 							<div class="modal-body">
-								<form id="add_ens_form">
 									<div class="mb-3">
 										<label for="nom-ens" class="form-label">Nom</label> <input
 											type="text" class="form-control" id="nom-ens">
@@ -312,7 +339,6 @@ body {
 										<label for="tel-ens" class="form-label">Tel</label> <input
 											type="number" class="form-control" id="tel-ens">
 									</div>
-								</form>
 							</div>
 							<div class="modal-footer">
 								<button type="button" class="btn btn-secondary" id="exit"
@@ -334,7 +360,7 @@ body {
 	<script
 		src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-	<script src="../js/enseignant_charge.js"></script>
+	<script src="../js/universite/etudiant_charge.js"></script>
 	<script src="../js/deconn.js"></script>
 </body>
 </html>

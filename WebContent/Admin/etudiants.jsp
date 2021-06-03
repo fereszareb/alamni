@@ -3,6 +3,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <!doctype html>
 <html lang="en">
+
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,12 +11,13 @@
 <meta name="author"
 	content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
 <meta name="generator" content="Hugo 0.80.0">
-<title>Enseignants</title>
+<title>Etudiants</title>
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
 	rel="stylesheet"
 	integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
 	crossorigin="anonymous">
+
 <link rel="stylesheet" href="../fontawesome/all.css">
 <script src="../js/check_admin.js"></script>
 <style>
@@ -145,6 +147,7 @@ body {
         }
 </style>
 </head>
+
 <body>
 
 	<header
@@ -178,11 +181,11 @@ body {
 							href="universite.jsp"> <i class="fas fa-university feather"></i>
 								Universités
 						</a></li>
-						<li class="nav-item"><a class="nav-link active"
+						<li class="nav-item"><a class="nav-link"
 							href="enseignant.jsp"> <i class="fas fa-user feather"></i>
 								Enseignants
 						</a></li>
-						<li class="nav-item"><a class="nav-link "
+						<li class="nav-item"><a class="nav-link active"
 							href="etudiants.jsp"> <i class="fas fa-user-graduate feather"></i>
 								Etudiants
 						</a></li>
@@ -204,12 +207,11 @@ body {
 				<nav aria-label="breadcrumb">
 					<ol class="breadcrumb">
 						<li class="breadcrumb-item"><a href="index.jsp">Admin</a></li>
-						<li class="breadcrumb-item active" aria-current="page">Enseignants</li>
+						<li class="breadcrumb-item active" aria-current="page">Etudiants</li>
 					</ol>
 				</nav>
 
 				<div class="container">
-
 					<div class="row rech">
 						<div class="row g-3">
 							<div class="col-12 col-md-3">
@@ -227,15 +229,14 @@ body {
 							<div class="col-12 col-md-3">
 								<div class="row">
 									<div class="col-12 col-md-6">
-										<button type="submit" class="btn btn-alamni mb-3 w-100"
-											id="btn_search_ens">Rechercher</button>
+										<button type="submit" class="btn btn-alamni w-100 mb-3"
+											id="btn_search_etud">Rechercher</button>
 									</div>
 									<div class="col-12 col-md-6">
 										<div class="btn btn-alamni w-100" data-bs-toggle="modal"
-											data-bs-target="#addens">Ajouter</div>
+											data-bs-target="#addetud">Ajouter</div>
 									</div>
 								</div>
-
 							</div>
 						</div>
 					</div>
@@ -249,7 +250,10 @@ body {
 										<th scope="col">Prénom</th>
 										<th scope="col">E-mail</th>
 										<th scope="col">Tel</th>
-										<th scope="col" class="action-btn "></th>
+										<th scope="col">Niveau</th>
+										<th scope="col">Specialité</th>
+										<th scope="col">Université</th>
+										<th scope="col" class="action-btn"></th>
 									</tr>
 								</thead>
 								<tbody id="data_load">
@@ -261,7 +265,29 @@ body {
 
 					</div>
 				</div>
-
+				<div class="modal fade" id="verifpass" tabindex="-1"
+					aria-labelledby="exampleModalLabel" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="exampleModalLabel">Verifier mot
+									de passe</h5>
+								<button type="button" class="btn-close" data-bs-dismiss="modal"
+									aria-label="Close"></button>
+							</div>
+							<div class="modal-body">
+								<p>Confirmer avec votre mot de passe :</p>
+								<input type="text" id="pass" class="form-control"
+									placeholder="Mot de passe" required>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary"
+									data-bs-dismiss="modal">Annuler</button>
+								<button type="button" class="btn btn-primary">Continue</button>
+							</div>
+						</div>
+					</div>
+				</div>
 				<div class="modal fade" id="consulte" tabindex="-1"
 					aria-labelledby="exampleModalLabel" aria-hidden="true">
 					<div class="modal-dialog">
@@ -272,7 +298,7 @@ body {
 								<button type="button" class="btn-close" data-bs-dismiss="modal"
 									aria-label="Close"></button>
 							</div>
-							<div class="modal-body" id="modal-data-ens"></div>
+							<div class="modal-body" id="modal-data-etud"></div>
 							<div class="modal-footer">
 								<button type="button" class="btn btn-secondary"
 									data-bs-dismiss="modal">Fermer</button>
@@ -280,44 +306,56 @@ body {
 						</div>
 					</div>
 				</div>
-				<div class="modal fade" id="addens" tabindex="-1"
+        <div class="modal fade" id="addetud" tabindex="-1"
 					aria-labelledby="exampleModalLabel" aria-hidden="true">
 					<div class="modal-dialog">
 						<div class="modal-content">
 							<div class="modal-header">
 								<h5 class="modal-title" id="exampleModalLabel">Ajouter
-									Enseignant</h5>
+									Etudiant</h5>
 								<button type="button" class="btn-close" data-bs-dismiss="modal"
 									aria-label="Close"></button>
 							</div>
 							<div class="modal-body">
-								<form id="add_ens_form">
+								<form id="add_etud_form">
 									<div class="mb-3">
-										<label for="nom-ens" class="form-label">Nom</label> <input
-											type="text" class="form-control" id="nom-ens">
+										<label for="nom-etud" class="form-label">Nom</label> <input
+											type="text" class="form-control" id="nom-etud">
 									</div>
 									<div class="mb-3">
-										<label for="prenom-ens" class="form-label">Prenom</label> <input
-											type="text" class="form-control" id="prenom-ens">
+										<label for="prenom-etud" class="form-label">Prenom</label> <input
+											type="text" class="form-control" id="prenom-etud">
 									</div>
 									<div class="mb-3">
-										<label for="email-ens" class="form-label">Email</label> <input
-											type="email" class="form-control" id="email-ens">
+										<label for="email-etud" class="form-label">Email</label> <input
+											type="email" class="form-control" id="email-etud">
+									</div>
+                  <div class="mb-3">
+										<label for="niv-etud" class="form-label">Niveau</label> <input
+											type="text" class="form-control" id="niv-etud">
+									</div>
+                  <div class="mb-3">
+										<label for="spec-etud" class="form-label">Specialité</label> <input
+											type="text" class="form-control" id="spec-etud">
+									</div>
+                  <div class="mb-3">
+										<label for="univ-etud" class="form-label">Université</label> <input
+											type="text" class="form-control" id="univ-etud">
 									</div>
 									<div class="mb-3">
-										<label for="cin-ens" class="form-label">Cin</label> <input
-											type="number" class="form-control" id="cin-ens">
+										<label for="cin-etud" class="form-label">Cin</label> <input
+											type="number" class="form-control" id="cin-etud">
 									</div>
 									<div class="mb-3">
-										<label for="tel-ens" class="form-label">Tel</label> <input
-											type="number" class="form-control" id="tel-ens">
+										<label for="tel-etud" class="form-label">Tel</label> <input
+											type="number" class="form-control" id="tel-etud">
 									</div>
 								</form>
 							</div>
 							<div class="modal-footer">
-								<button type="button" class="btn btn-secondary" id="exit"
+								<button type="button" class="btn btn-secondary"
 									data-bs-dismiss="modal">Annuler</button>
-								<button type="button" class="btn btn-primary" id="add_ens"
+								<button type="button" class="btn btn-primary" id="add_etud"
 									data-bs-toggle="modal">Ajouter</button>
 							</div>
 						</div>
@@ -334,7 +372,8 @@ body {
 	<script
 		src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-	<script src="../js/enseignant_charge.js"></script>
-	<script src="../js/deconn.js"></script>
+	<script src="../js/etudiant_charge.js"></script>
+<script src="../js/deconn.js"></script>
 </body>
+
 </html>

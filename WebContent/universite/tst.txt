@@ -1,0 +1,243 @@
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th scope="col"></th>
+                                    <th scope="col">Lundi</th>
+                                    <th scope="col">Mardi</th>
+                                    <th scope="col">Mercredi</th>
+                                    <th scope="col">Jeudi</th>
+                                    <th scope="col">Vendredi</th>
+                                    <th scope="col">Samedi</th>
+                                </tr>
+                            </thead>
+
+                            <tbody id="data_load">
+
+                                <tr>
+                                    <th scope="row">08:30 - 10:00</th>
+                                    <td align="center" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                        <div class="text-end">
+                                            <b class="text-danger c-none">&#11044;</b>
+                                        </div>
+                                        <h5></h5>
+                                        <p class="statut-matiere"> </p>
+                                    </td>
+
+                                    <td align="center" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                        <div class="text-end">
+                                            <b class="text-danger  ">&#11044;</b>
+                                        </div>
+                                        <h5>ISTQB</h5>
+                                        <p class="statut-matiere"></p>
+                                    </td>
+
+                                    <td align="center" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                        <div class="text-end">
+                                            <b class="text-danger   c-none">&#11044;</b>
+                                        </div>
+                                        <h5>Tech Prog Web</h5>
+                                        <p class="statut-matiere"> </p>
+                                    </td>
+                                    <td align="center" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                        <div class="text-end">
+                                            <b class="text-danger   c-none">&#11044;</b>
+                                        </div>
+                                        <h5>Projet fédéré</h5>
+                                        <p class="statut-matiere"> </p>
+                                    </td>
+
+                                    <td align="center" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                        <div class="text-end">
+                                            <b class="text-danger   c-none">&#11044;</b>
+                                        </div>
+                                        <h5>Admin BD</h5>
+                                        <p class="statut-matiere"> </p>
+                                    </td>
+                                    <td align="center">
+                                        <div class="text-end">
+                                            <b class="text-danger   c-none">&#11044;</b>
+                                        </div>
+                                        <h5>ISTQB</h5>
+                                        <p class="statut-matiere"> </p>
+                                    </td>
+                                </tr>
+
+
+                                <tr>
+                                    <th scope="row">10:15 - 11:45</th>
+                                    <td align="center" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                        <div class="text-end">
+                                            <b class="text-danger   c-none">&#11044;</b>
+                                        </div>
+                                        <h5>Tech.Ind.Multimedia</h5>
+                                        <p class="statut-matiere"> </p>
+                                    </td>
+
+                                    <td align="center" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                        <div class="text-end">
+                                            <b class="text-danger  Blink">&#11044;</b>
+                                        </div>
+                                        <h5>Mini projet JEE</h5>
+                                        <p class="encour statut-matiere">En cour</p>
+                                    </td>
+
+                                    <td align="center" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                        <div class="text-end">
+                                            <b class="text-danger   c-none">&#11044;</b>
+                                        </div>
+                                        <h5>Droit informatique</h5>
+                                        <p class="statut-matiere"> </p>
+                                    </td>
+                                    <td align="center" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                        <div class="text-end">
+                                            <b class="text-danger   c-none">&#11044;</b>
+                                        </div>
+                                        <h5>Projet fédéré</h5>
+                                        <p class="statut-matiere"> </p>
+                                    </td>
+
+                                    <td align="center" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                        <div class="text-end">
+                                            <b class="text-danger c-none">&#11044;</b>
+                                        </div>
+                                        <h5>Admin BD</h5>
+                                        <p class="statut-matiere"> </p>
+                                    </td>
+                                    <td align="center" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                        <div class="text-end">
+                                            <b class="text-danger   c-none">&#11044;</b>
+                                        </div>
+                                        <h5>ISTQB</h5>
+                                        <p class="annuler statut-matiere">Annuler</p>
+                                    </td>
+                                </tr>
+
+
+
+                                <tr class="table-secondary">
+                                    <th scope="row"></th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+
+
+
+                                <tr>
+                                    <th scope="row">13:00 - 14:30</th>
+                                    <td align="center" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                        <div class="text-end">
+                                            <b class="text-danger   c-none">&#11044;</b>
+                                        </div>
+                                        <h5>Compilation</h5>
+                                        <p class="statut-matiere"> </p>
+                                    </td>
+
+                                    <td align="center" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                        <div class="text-end">
+                                            <b class="text-danger   c-none">&#11044;</b>
+                                        </div>
+                                        <h5>Fondements I.A</h5>
+                                        <p class="statut-matiere"> </p>
+                                    </td>
+
+                                    <td align="center" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                        <div class="text-end">
+                                            <b class="text-danger   c-none">&#11044;</b>
+                                        </div>
+                                        <h5>Datawarehouse</h5>
+                                        <p class="statut-matiere"> </p>
+                                    </td>
+                                    <td align="center">
+                                        <div class="text-end">
+                                            <b class="text-danger   c-none">&#11044;</b>
+                                        </div>
+                                        <h5></h5>
+                                        <p class="statut-matiere"> </p>
+                                    </td>
+
+                                    <td align="center" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                        <div class="text-end">
+                                            <b class="text-danger c-none ">&#11044;</b>
+                                        </div>
+                                        <h5>Mini Projet JEE</h5>
+                                        <p class="statut-matiere"> </p>
+                                    </td>
+                                    <td align="center">
+                                        <div class="text-end">
+                                            <b class="text-danger   c-none">&#11044;</b>
+                                        </div>
+                                        <h5></h5>
+                                        <p class="statut-matiere"> </p>
+                                    </td>
+                                </tr>
+
+
+
+                                <tr>
+                                    <th scope="row">14:45 - 16:15</th>
+                                    <td align="center" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                        <div class="text-end">
+                                            <b class="text-danger c-none">&#11044;</b>
+                                        </div>
+                                        <h5>Anglais 4</h5>
+                                        <p class="statut-matiere"> </p>
+                                    </td>
+
+                                    <td align="center" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                        <div class="text-end">
+                                            <b class="text-danger   c-none">&#11044;</b>
+                                        </div>
+                                        <h5>Compilation</h5>
+                                        <p class="statut-matiere"> </p>
+                                    </td>
+
+                                    <td align="center" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                        <div class="text-end">
+                                            <b class="text-danger   c-none">&#11044;</b>
+                                        </div>
+                                        <h5>Compilation</h5>
+                                        <p class="statut-matiere"> </p>
+                                    </td>
+                                    <td align="center" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                        <div class="text-end">
+                                            <b class="text-danger   c-none">&#11044;</b>
+                                        </div>
+                                        <h5>Mini projet JEE</h5>
+                                        <p class="statut-matiere"> </p>
+                                    </td>
+
+                                    <td align="center" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                        <div class="text-end">
+                                            <b class="text-danger   c-none">&#11044;</b>
+                                        </div>
+                                        <h5>Fondements I.A</h5>
+                                        <p class="statut-matiere"> </p>
+                                    </td>
+                                    <td align="center">
+                                        <div class="text-end">
+                                            <b class="text-danger   c-none">&#11044;</b>
+                                        </div>
+                                        <h5></h5>
+                                        <p class="statut-matiere"> </p>
+                                    </td>
+                                </tr>
+
+
+
+
+                                <tr>
+                                    <th scope="row">16:30 - 18:00</th>
+                                    <td align="center"></td>
+                                    <td align="center"></td>
+                                    <td align="center"></td>
+                                    <td align="center"></td>
+                                    <td align="center"></td>
+                                    <td align="center"></td>
+                                </tr>
+                            </tbody>
+
+                        </table>

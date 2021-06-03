@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alamni</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@600&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+
+        }
+        .content_index_bg{
+            width: 100%;
+            height: 100vh;
+            background-image: url(picture/background_index.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+        .content_index{
+            background-color: rgba(2, 2, 99, 0.6);
+            height: 100%;
+            width: 100%;
+        }
+        .slant{
+            margin-top: 60vh;
+            width: 100%;
+            height: 40vh;
+            fill: white;
+        }
+        .content_page{
+            top: 0;
+            width: 100%;
+            max-width: 1220px;
+        }
+        .desc {
+            font-weight: bolder;
+            color: white;
+            font-family: 'Kanit', sans-serif;
+        }
+        .desc h1{
+            font-size: 3rem;
+            color: gold;
+        }
+        .desc h2{
+            font-size: 1.75rem;
+        }
+        .desc h4{
+            padding-top: 20px;
+            font-size: 1rem;
+        }
+        .logo_position{
+            background: gold;
+            border-radius: 0 0 70px 70px;
+        }
+        form{
+            padding: 1rem 1rem;
+        }
+        .card{
+            max-width: 400px;
+        }
+        @media screen and (max-width: 772px) {
+            .desc , .copyright-foot{
+                display: none;
+            }
+        }
+        .btn-alamni{
+            color: #fff;
+            background: linear-gradient(90deg ,rgb(255, 94, 0), gold);
+        }
+        .redirect_btn{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="content_index_bg">
+        <div class="content_index">
+            <svg class="slant" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><polygon points="0,100 100,0 100,100" /></svg>
+        </div>
+    </div>
+    <div class="position-absolute top-50 start-50 translate-middle content_page">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-6 desc">
+                        <h1>Education !</h1>
+                        <h2>Alamni est toujours la meilleure</h2>
+                        <h4>Une plate-forme d'éducation en ligne bien organisée pour les étudiants des universités tunisiennes</h4>
+                        <div class="text-center pt-5">
+                            <a href="mailto:contact@alamni.tn" class="btn btn-alamni px-5">Contact</a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="card">
+                            <div class="card-body p-0 shadow">
+                                <!--Logo de site web -->
+                                <div class="text-center pt-3 pb-5 mb-5 logo_position">
+                                    <img src="picture/logo/logo-white.svg" width="75%" alt="">
+                                </div>
+                                <!--Formulaire d'authefication-->
+                                <div id="content_login" class="m-3">
+                                        <div class="mb-3">
+                                        <label for="exampleInputEmail1" class="form-label">E-mail</label>
+                                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+                                        
+                                        </div>
+                                        <div class="mb-3">
+                                        <label for="exampleInputPassword1" class="form-label">Mot de passe</label>
+                                        <input type="password" class="form-control" id="password">
+                                        
+                                        </div>
+                                        <div class="mb-3 form-check">
+                                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                        <label class="form-check-label" for="exampleCheck1">Enregistrer </label>
+                                        </div>
+                                        <div id="Erreurlogin" class="form-text text-danger"></div>
+                                        <button type="submit" class="btn btn-alamni col-12" id="connecte">Se Connecter</button>
+                                        <div class="text-end p-2">
+                                            <a id="password_forget" class="redirect_btn text-decoration-none">Mot de passe oublié</a>
+                                        </div>
+                                </div>
+                                <div id="content_forget" style="display : none">
+                                    <form>
+                                        <div class="mb-3 text-center">
+                                          <label for="exampleInputEmail1" class="form-label">Entrer votre Email</label>
+                                          <input type="email" class="form-control" id="email_forget">
+                                        </div>
+                                        
+                                        <button type="submit" id="valide" class="btn btn-alamni col-12">Valider</button>
+                                        <!--Mot de passe oublier-->
+                                        <div class="p-2">
+                                            <small class="text-secondary">Si votre email existe, nous vous envoyons un email à votre corriger électronique. Cliquer sur le lien pour réinitialiser votre mot de passe</small>
+                                        </div>
+                                        <div class="text-end p-2">
+                                            <a id="password_forget_back" class="redirect_btn text-decoration-none">J'ai un compte</a>
+                                        </div>
+                                      </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <div class="position-absolute bottom-0 start-50 translate-middle-x copyright-foot">
+        <h6>Copyright 2021 - All rights reserved . Powered by LGLSI-2C - Alamni</h6>
+    </div>
+
+
+    <script>
+document.getElementById("password_forget").addEventListener('click',function(){
+    document.getElementById("content_login").style.display = "none" ;
+    document.getElementById("content_forget").style.display = "block" ;
+})
+document.getElementById("password_forget_back").addEventListener('click',function(){
+    document.getElementById("content_login").style.display = "block" ;
+    document.getElementById("content_forget").style.display = "none" ;
+})
+
+
+
+var btn = document.getElementById('valide') ;
+    btn.addEventListener('click', function(){
+        btn.disabled = true  ;
+        if (true){
+            btn.innerText = 'Email envoyer';
+        }else {
+            btn.disabled = false ;
+        }
+    })
+
+
+
+
+
+document.getElementById("connecte").addEventListener('click',function(){
+  var email = document.getElementById("email").value;
+  var password = document.getElementById("password").value;
+  $.ajax({
+    type: "POST",
+    url: "function/login.jsp",
+    data: {
+      password: password,
+      email: email
+    },
+    success: function (result) {
+     var   x = JSON.parse(result)
+     console.log(x);
+      if (x["login"] == false ) {
+        document.getElementById("email").value = "";
+        document.getElementById("password").value = "";
+        document.getElementById("Erreurlogin").innerHTML = "Votre Email ou mot de passe est incorrecte";
+        
+      }else{
+          localStorage.login = true ;
+          localStorage.type = x["type"]
+          localStorage.id = x["id"];
+          localStorage.nom = x["nom"];
+          localStorage.prenom = x["prenom"];
+            switch(x["type"]){
+                case 0 : window.location.href = "Admin/"; break ;
+                case 1 : window.location.href = "universite/"; break ;
+                case 2 : window.location.href = "enseignant/"; break ;
+                case 3 : window.location.href = "Etudiant/"; break ;
+
+            }
+      }
+    },
+  });
+})
+    </script>
+</body>
+</html>

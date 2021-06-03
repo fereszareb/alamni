@@ -10,14 +10,16 @@
 <meta name="author"
 	content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
 <meta name="generator" content="Hugo 0.80.0">
-<title>Enseignants</title>
+<title>Admins</title>
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
 	rel="stylesheet"
 	integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
 	crossorigin="anonymous">
+
 <link rel="stylesheet" href="../fontawesome/all.css">
 <script src="../js/check_admin.js"></script>
+
 <style>
 .bd-placeholder-img {
 	font-size: 1.125rem;
@@ -178,16 +180,16 @@ body {
 							href="universite.jsp"> <i class="fas fa-university feather"></i>
 								Universités
 						</a></li>
-						<li class="nav-item"><a class="nav-link active"
+						<li class="nav-item"><a class="nav-link"
 							href="enseignant.jsp"> <i class="fas fa-user feather"></i>
 								Enseignants
 						</a></li>
-						<li class="nav-item"><a class="nav-link "
-							href="etudiants.jsp"> <i class="fas fa-user-graduate feather"></i>
-								Etudiants
+						<li class="nav-item"><a class="nav-link" href="etudiants.jsp">
+								<i class="fas fa-user-graduate feather"></i> Etudiants
 						</a></li>
-						<li class="nav-item"><a class="nav-link" href="admin.jsp">
-								<i class="fas fa-user-shield feather"></i> Admins
+						<li class="nav-item"><a class="nav-link active"
+							href="admin.jsp"> <i class="fas fa-user-shield feather"></i>
+								Admins
 						</a></li>
 						<li class="nav-item"><a class="nav-link" href="parametre.jsp">
 								<i class="fas fa-cog feather"></i> Paramétres
@@ -204,40 +206,14 @@ body {
 				<nav aria-label="breadcrumb">
 					<ol class="breadcrumb">
 						<li class="breadcrumb-item"><a href="index.jsp">Admin</a></li>
-						<li class="breadcrumb-item active" aria-current="page">Enseignants</li>
+						<li class="breadcrumb-item active" aria-current="page">Admins</li>
 					</ol>
 				</nav>
 
 				<div class="container">
-
-					<div class="row rech">
-						<div class="row g-3">
-							<div class="col-12 col-md-3">
-								<input type="text" class="form-control" id="cin"
-									placeholder="CIN">
-							</div>
-							<div class="col-12 col-md-3">
-								<input type="text" class="form-control" id="prenom"
-									placeholder="Prénom">
-							</div>
-							<div class="col-12 col-md-3">
-								<input type="text" class="form-control" id="nom"
-									placeholder="Nom">
-							</div>
-							<div class="col-12 col-md-3">
-								<div class="row">
-									<div class="col-12 col-md-6">
-										<button type="submit" class="btn btn-alamni mb-3 w-100"
-											id="btn_search_ens">Rechercher</button>
-									</div>
-									<div class="col-12 col-md-6">
-										<div class="btn btn-alamni w-100" data-bs-toggle="modal"
-											data-bs-target="#addens">Ajouter</div>
-									</div>
-								</div>
-
-							</div>
-						</div>
+					<div class="col-12 text-end">
+						<div class="btn btn-alamni" data-bs-toggle="modal"
+							data-bs-target="#addadm">Ajouter Admin</div>
 					</div>
 					<div class="row">
 						<div class="table-responsive">
@@ -249,7 +225,7 @@ body {
 										<th scope="col">Prénom</th>
 										<th scope="col">E-mail</th>
 										<th scope="col">Tel</th>
-										<th scope="col" class="action-btn "></th>
+										<th scope="col" class="action-btn"></th>
 									</tr>
 								</thead>
 								<tbody id="data_load">
@@ -261,7 +237,7 @@ body {
 
 					</div>
 				</div>
-
+				
 				<div class="modal fade" id="consulte" tabindex="-1"
 					aria-labelledby="exampleModalLabel" aria-hidden="true">
 					<div class="modal-dialog">
@@ -272,7 +248,7 @@ body {
 								<button type="button" class="btn-close" data-bs-dismiss="modal"
 									aria-label="Close"></button>
 							</div>
-							<div class="modal-body" id="modal-data-ens"></div>
+							<div class="modal-body" id="modal-data-adm"></div>
 							<div class="modal-footer">
 								<button type="button" class="btn btn-secondary"
 									data-bs-dismiss="modal">Fermer</button>
@@ -280,50 +256,50 @@ body {
 						</div>
 					</div>
 				</div>
-				<div class="modal fade" id="addens" tabindex="-1"
-					aria-labelledby="exampleModalLabel" aria-hidden="true">
-					<div class="modal-dialog">
-						<div class="modal-content">
-							<div class="modal-header">
-								<h5 class="modal-title" id="exampleModalLabel">Ajouter
-									Enseignant</h5>
-								<button type="button" class="btn-close" data-bs-dismiss="modal"
-									aria-label="Close"></button>
-							</div>
-							<div class="modal-body">
-								<form id="add_ens_form">
-									<div class="mb-3">
-										<label for="nom-ens" class="form-label">Nom</label> <input
-											type="text" class="form-control" id="nom-ens">
-									</div>
-									<div class="mb-3">
-										<label for="prenom-ens" class="form-label">Prenom</label> <input
-											type="text" class="form-control" id="prenom-ens">
-									</div>
-									<div class="mb-3">
-										<label for="email-ens" class="form-label">Email</label> <input
-											type="email" class="form-control" id="email-ens">
-									</div>
-									<div class="mb-3">
-										<label for="cin-ens" class="form-label">Cin</label> <input
-											type="number" class="form-control" id="cin-ens">
-									</div>
-									<div class="mb-3">
-										<label for="tel-ens" class="form-label">Tel</label> <input
-											type="number" class="form-control" id="tel-ens">
-									</div>
-								</form>
-							</div>
-							<div class="modal-footer">
-								<button type="button" class="btn btn-secondary" id="exit"
-									data-bs-dismiss="modal">Annuler</button>
-								<button type="button" class="btn btn-primary" id="add_ens"
-									data-bs-toggle="modal">Ajouter</button>
-							</div>
-						</div>
-					</div>
-				</div>
 			</main>
+		</div>
+	</div>
+	<div class="modal fade" id="addadm" tabindex="-1"
+		aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Ajouter
+						Admin</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal"
+						aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<form id="add_adm_form">
+						<div class="mb-3"> 
+							<label for="nom-adm" class="form-label">Nom</label> 
+							<input type="text" class="form-control" id="nom-adm">
+						</div>
+						<div class="mb-3"> 
+							<label for="prenom-adm" class="form-label">Prenom</label> 
+							<input type="text" class="form-control"id="prenom-adm">
+						</div>
+						<div class="mb-3">
+							<label for="email-adm" class="form-label">Email</label> 
+							<input type="email" class="form-control"id="email-adm">
+						</div>
+						<div class="mb-3">
+							<label for="cin-adm" class="form-label">Cin</label> 
+							<input type="number" class="form-control" id="cin-adm">
+						</div>
+						<div class="mb-3">
+							<label for="tel-adm" class="form-label">Tel</label>
+							<input type="number" class="form-control" id="tel-adm">
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary"
+						data-bs-dismiss="modal">Annuler</button>
+					<button type="button" class="btn btn-primary" id="add_admin"
+						data-bs-toggle="modal">Ajouter</button>
+				</div>
+			</div>
 		</div>
 	</div>
 	<script
@@ -333,8 +309,7 @@ body {
 	<script src="../fontawesome/all.js"></script>
 	<script
 		src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-	<script src="../js/enseignant_charge.js"></script>
+	<script src="../js/admin_charge.js"></script>
 	<script src="../js/deconn.js"></script>
 </body>
 </html>
